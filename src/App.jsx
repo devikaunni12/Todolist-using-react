@@ -6,6 +6,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import StateCapital from "./components/statecapital";
 import LoginValidation from "./components/validation";
 import TodoPage from "./components/TodoPage";
+import Timer from "./components/Timer";
 
 
 function Greeting() {
@@ -69,6 +70,19 @@ const [count, setCount] = useState(0);
               }}>
                 Go to Todo List
               </Link>
+              <br />
+              <Link to="/timer" style={{
+                display: 'inline-block',
+                padding: '10px 20px',
+                backgroundColor: '#28a745',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '5px',
+                fontWeight: 'bold',
+                marginTop: '10px'
+              }}>
+                Go to Timer
+              </Link>
             </div>
           </div>
           <div>
@@ -81,6 +95,7 @@ const [count, setCount] = useState(0);
         </>
       } />
       <Route path="/todo" element={<TodoPage />} />
+      <Route path="/timer" element={<Timer />} />
     </Routes>
   );
 }

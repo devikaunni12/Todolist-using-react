@@ -1,0 +1,133 @@
+.timer-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.timer-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-input {
+  width: 80%;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.timer-input:focus {
+  background: white;
+  transform: scale(1.05);
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.timer-button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.start-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.start-button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.stop-button {
+  background: #f44336;
+  color: white;
+}
+
+.stop-button:hover {
+  background: #da190b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+}
+
+.reset-button {
+  background: #ff9800;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.alarm-message {
+  font-size: 1.5rem;
+  color: #ffeb3b;
+  font-weight: bold;
+  animation: blink 1s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .timer-title {
+    font-size: 2rem;
+  }
+
+  .timer-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
