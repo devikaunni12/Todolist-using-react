@@ -7,6 +7,7 @@ import StateCapital from "./components/statecapital";
 import LoginValidation from "./components/validation";
 import TodoPage from "./components/TodoPage";
 import Timer from "./components/Timer";
+import Calculator from "./components/Calculator";
 
 
 function Greeting() {
@@ -83,6 +84,19 @@ const [count, setCount] = useState(0);
               }}>
                 Go to Timer
               </Link>
+              <br />
+              <Link to="/calculator" style={{
+                display: 'inline-block',
+                padding: '10px 20px',
+                backgroundColor: '#ff6b6b',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '5px',
+                fontWeight: 'bold',
+                marginTop: '10px'
+              }}>
+                Go to Calculator
+              </Link>
             </div>
           </div>
           <div>
@@ -96,6 +110,7 @@ const [count, setCount] = useState(0);
       } />
       <Route path="/todo" element={<TodoPage />} />
       <Route path="/timer" element={<Timer />} />
+      <Route path="/calculator" element={<Calculator />} />
     </Routes>
   );
 }
